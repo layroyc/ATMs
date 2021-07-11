@@ -1,33 +1,31 @@
 package com.hp.controller;
 
-import com.hp.entity.Customer;
-import com.hp.entity.CustomerData;
-import com.hp.entity.Manager;
-import com.hp.entity.ManagerData;
+import com.hp.service.CustomerService;
 import com.hp.util.ATMDemo;
 
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class ATMMain {
 
     private static String cardId;
     private static String password;
+    private static CustomerService customerService;
 
     public static void main(String[] args) {
+        customerService = new CustomerService();
         //测试客户类的数据有没有存好
-        CustomerData customerData = CustomerData.getInstance();
+        /*CustomerData customerData = CustomerData.getInstance();
         ArrayList<Customer> customerList = customerData.getCustomerList();
         for (Customer customer : customerList) {
             System.out.println("customer = " + customer);
-        }
+        }*/
 
         //测试管理员类的数据是否存储好
-        ManagerData managerData = ManagerData.getInstance();
+        /*ManagerData managerData = ManagerData.getInstance();
         ArrayList<Manager> managerList = managerData.getManagerList();
         for (Manager manager : managerList) {
             System.out.println("manager = " + manager);
-        }
+        }*/
         //1、界面阶段
        ATMDemo. welcome();
 
@@ -46,6 +44,7 @@ public class ATMMain {
         //①先校验角色，判断cardId的长度
         if(cardId.length()==12){//客户
             //校验密码
+            customerService.checkPwd(cardId, password);
         }
     }
     //输入账户名 和 密码

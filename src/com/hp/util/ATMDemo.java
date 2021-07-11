@@ -20,4 +20,26 @@ public class ATMDemo {
         System.out.println("***********欢迎您使用ATM取款机*************");
         System.out.println("*****************************************");
     }
+
+    //客户的一级选择
+    public static void oneOption(){
+        System.out.println("*****************************************");
+        System.out.println("********请输入你想要的操作类型：*********");
+        System.out.println("********1.余额查询        2.取款*********");
+        System.out.println("********3.转账            4.存款*********");
+        System.out.println("********5.退卡                  *********");
+        System.out.println("*****************************************");
+    }
+
+    //取款选择权
+    public static void withdrawalOpt(){
+        System.out.println("请输入取款金额:");
+        System.out.println("*****************************************");
+        System.out.println("********请输入你想要的操作类型：*********");
+        System.out.println("********1.100       2.200*********");
+        System.out.println("********3.300           4.500*********");
+        System.out.println("********5.800           6.1000*********");
+        System.out.println("********7.2000          8.其他*********");
+        System.out.println("*****************************************");
+    }
 }

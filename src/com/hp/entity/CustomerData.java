@@ -11,7 +11,7 @@ public class CustomerData {
     }
 
     private CustomerData() {
-        //在构造方法中书写 初始化数据 写循环把数据拿出来
+        //在构造方法中书写 初始化数据
         customerList = new ArrayList<>();
         for (int i = 0; i < 10; i++) {
             //每循环一次，诞生一个customer对象，存入到集合中
